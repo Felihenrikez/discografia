@@ -40,7 +40,7 @@ public class ArtistaController {
         value = "/artistas",
         produces = MediaType.APPLICATION_JSON_VALUE
     )
-    public ResponseEntity<List<Artista>>HandleGetArtistaRequest(){
+    public ResponseEntity<List<Artista>>HandleGetArtistasRequest(){
         List<Artista> artistas =artistarepo.findAll();
         return new ResponseEntity<>(artistas,null,HttpStatus.OK);
     }
@@ -59,9 +59,9 @@ public class ArtistaController {
     }
 
     @PutMapping(
-        value = "/artista/{id}",
-        consumes = MediaType.APPLICATION_JSON_VALUE,
-        produces = MediaType.APPLICATION_JSON_VALUE
+    value = "/artista/{id}",
+    consumes = MediaType.APPLICATION_JSON_VALUE,
+    produces = MediaType.APPLICATION_JSON_VALUE
     )
     public ResponseEntity<Artista> HandleUpdateArtistaRequest(
         @PathVariable("id") String id,

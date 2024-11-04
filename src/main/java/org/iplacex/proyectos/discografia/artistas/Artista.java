@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Artista {
     @Id
      public String  _id;
-
+     public String nombre;
      public List<String> estilos;
      public int anioFundacion;
      public Boolean estaActivo;

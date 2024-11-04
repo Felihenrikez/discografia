@@ -13,7 +13,6 @@ public class Disco {
     public String _id;
 
     public String idArtista;
-
     public String nombre;
     public int anioLanzamiento;
     public List<String> canciones;
